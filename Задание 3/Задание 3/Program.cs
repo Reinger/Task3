@@ -28,9 +28,29 @@ namespace Задание_3
             return X;
         }
 
+        static bool Prov1 (double X, double Y)
+        {
+            if (Y >= X * X) return true;
+            else return false;
+        }
+
+        static bool Prov2(double X, double Y)
+        {
+            if (Y <= Math.Pow(Math.E,X)) return true;
+            else return false;
+        }
+
+        static bool Prov3(double X, double Y)
+        {
+            if (Y <= Math.Pow(Math.E, -X)) return true;
+            else return false;
+        }
+
         static void Main(string[] args)
         {
             double X = ReadDouble("X="), Y = ReadDouble("Y=");
+
+
         }
     }
 }
