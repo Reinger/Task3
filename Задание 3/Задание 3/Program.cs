@@ -28,7 +28,7 @@ namespace Задание_3
             return X;
         }
 
-        static bool Prov1 (double X, double Y)
+        static bool Prov1(double X, double Y)
         {
             if (Y >= X * X) return true;
             else return false;
@@ -36,7 +36,7 @@ namespace Задание_3
 
         static bool Prov2(double X, double Y)
         {
-            if (Y <= Math.Pow(Math.E,X)) return true;
+            if (Y <= Math.Pow(Math.E, X)) return true;
             else return false;
         }
 
@@ -50,7 +50,20 @@ namespace Задание_3
         {
             double X = ReadDouble("X="), Y = ReadDouble("Y=");
 
+            Console.WriteLine("X={0}, Y={1}", X, Y);
 
+            if (Prov1(X, Y) && Prov2(X, Y) && Prov3(X, Y))
+            {
+                Console.WriteLine("Точка принадлежит заштрихованной области");
+                Console.WriteLine("U=X+Y={0}", X + Y);
+            }
+            else
+            {
+                Console.WriteLine("Точка не принадлежит заштрихованной области");
+                Console.WriteLine("U=X-Y={0}", X - Y);
+            }
+
+            Console.ReadLine();
         }
     }
 }
